@@ -1,0 +1,15 @@
+@import '../layout';
+
+:host {
+  display: block;
+}
+
+.section-container {
+  height: 100%;
+  background: $section-background-color;
+}
+
+.content-container {
+  @include app-width-limiter;
+  height: 100%;
+}
