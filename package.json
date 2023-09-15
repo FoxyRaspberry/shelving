@@ -1,5 +1,8 @@
 {
 	"author": "FoxyRaspberry",
+	"dependencies": {
+		"@angular/cli": "^14.0.0"
+	},
 	"description": "Shelving. Angular application.",
 	"license": "ISC",
 	"main": "index.js",
