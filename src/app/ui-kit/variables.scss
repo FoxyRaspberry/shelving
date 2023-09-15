@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+// Colors
+$app-color-blue: #009ecc;
+$app-color-grey-dark-n1: #303240;
+$app-color-grey-dark-n2: #333;
+$app-color-grey-dark-n3: #464a5a;
+$app-color-grey-dark-n4: #474a59;
+$app-color-grey-dark-n5: #858997;
+$app-color-grey-light-n1: #ced0db;
+$app-color-grey-light-n2: #f5f6fa;
+$app-color-green: #67a300;
+$app-color-green--lighten-65: lighten($app-color-green, 65%);
+$app-color-white: #fff;
+
+// Font-sizes
+$app-font-size-s: 12px;
+$app-font-size-m: 14px;
+$app-font-size-l: 18px;
+$app-font-size-xl: 24p;
+
+// Line-heights
+$app-line-height-m: 18px;
+$app-line-height-l: 24px;

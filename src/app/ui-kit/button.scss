@@ -1,0 +1,10 @@
+@mixin app-button-mixin {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 12px;
+  height: 36px;
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}

@@ -25,6 +25,14 @@
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "~app/*": [
+        "src/app/*"
+      ],
+      "~ui-kit/*": [
+        "src/app/ui-kit/*"
+      ]
+    },
     "sourceMap": true,
     "strict": true,
     "target": "es2020"

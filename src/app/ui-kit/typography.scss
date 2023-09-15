@@ -1,0 +1,21 @@
+@import './variables';
+
+$app-font-body-color: $app-color-grey-dark-n4;
+$app-font-headline-color: $app-color-grey-dark-n2;
+
+@mixin app-font-generator-mixin($color, $font-size, $font-weight, $line-height) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+@mixin app-font-body-m-mixin($color: $app-font-body-color) {
+  @include app-font-generator-mixin($color, $app-font-size-m, 400, $app-line-height-m);
+}
+
+@mixin app-font-headline-l-mixin($color: $app-font-headline-color) {
+  @include app-font-generator-mixin($color, $app-font-size-xl, 600, $app-line-height-l);
+}
