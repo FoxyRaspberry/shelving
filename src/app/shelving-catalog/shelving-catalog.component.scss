@@ -1,0 +1,15 @@
+:host {
+  display: grid;
+  grid-auto-rows: 1fr auto;
+  height: 100%;
+}
+
+.scrollable-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.main-container {
+  flex: 1;
+}

@@ -1,0 +1,38 @@
+@import '../../typography';
+@import '../layout';
+
+:host {
+  display: block;
+}
+
+.header-container {
+  background: $panel-background-color;
+}
+
+.content-container {
+  @include app-width-limiter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.authorization-container {
+  display: flex;
+  column-gap: 24px;
+}
+
+.log-out-button {
+  border: none;
+  background: none;
+  @include app-font-generator-mixin($app-color-white, $app-font-size-m, 400, $app-line-height-l);
+  cursor: pointer;
+
+  &:hover {
+    color: $app-color-blue;
+  }
+}
+
+.user-state {
+  @include app-font-generator-mixin($app-color-white, $app-font-size-m, 400, $app-line-height-l);
+}

@@ -1,0 +1,9 @@
+@import '../variables';
+
+$panel-background-color: $app-color-grey-dark-n1;
+$section-background-color: $app-color-grey-light-n2;
+
+@mixin app-width-limiter {
+  margin: auto;
+  width: 1110px;
+}

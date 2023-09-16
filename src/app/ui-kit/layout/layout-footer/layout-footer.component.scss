@@ -1,0 +1,18 @@
+@import '../layout';
+
+:host {
+  display: block;
+}
+
+.footer-container {
+  background: $panel-background-color;
+}
+
+.content-container {
+  @include app-width-limiter;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  color: $app-color-white;
+}
