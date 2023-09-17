@@ -4,6 +4,7 @@
     <section class="form-container">
       <label class="label">
         <b>Shelvings:</b>
+        <!-- `[(ngModel)]` служит для синхронизации значения как со стороны пользователя, так и со стороны кода (контроллера).-->
         <input [(ngModel)]="shelvingsCount" max="5" min="1" type="number">
       </label>
       <label class="label">
@@ -23,6 +24,7 @@
       (cellUnderCursor)="onCellUnderCursor($event)"
     ></app-shelving-list>
     <hr>
+    <!-- `<ng-container>` - специальный тег от Angular, помогающий организовать структуру и при этом не присутствующий в итоговой разметке. -->
     <ng-container *ngIf="product">
       <app-product-card 
         [price]="product.price"
