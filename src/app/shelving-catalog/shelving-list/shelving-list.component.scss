@@ -1,0 +1,14 @@
+@import '../../ui-kit/variables.scss';
+
+:host {
+  display: block;
+}
+
+.cell {
+  padding: 8px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $app-color-blue;
+  }
+}
