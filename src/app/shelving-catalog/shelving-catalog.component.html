@@ -1,6 +1,34 @@
 <div class="scrollable-container">
   <app-layout-header></app-layout-header>
   <app-layout-section class="main-container">
+    <section class="form-container">
+      <label class="label">
+        <b>Shelvings:</b>
+        <input [(ngModel)]="shelvingsCount" max="5" min="1" type="number">
+      </label>
+      <label class="label">
+        <b>Shelves:</b>
+        <input [(ngModel)]="shelvesCount" max="5" min="1" type="number">
+      </label>
+      <label class="label">
+        <b>Cells:</b>
+        <input [(ngModel)]="cellsCount" max="5" min="1" type="number">
+      </label>
+    </section>
+    <hr>
+    <app-shelving-list
+      [cellsCount]="cellsCount"
+      [shelvesCount]="shelvesCount"
+      [shelvingsCount]="shelvingsCount"
+      (cellUnderCursor)="onCellUnderCursor($event)"
+    ></app-shelving-list>
+    <hr>
+    <ng-container *ngIf="product">
+      <app-product-card 
+        [price]="product.price"
+        [title]="product.title"
+      ></app-product-card>
+    </ng-container>
   </app-layout-section>
 </div>
 <app-layout-footer></app-layout-footer>

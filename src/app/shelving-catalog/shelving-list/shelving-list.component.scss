@@ -4,6 +4,18 @@
   display: block;
 }
 
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.table {
+  background-color: $app-color-grey-light-n1;
+  border-radius: 10px;
+}
+
 .cell {
   padding: 8px;
   border-radius: 10px;

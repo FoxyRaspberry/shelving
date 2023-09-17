@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, Output, ViewChild } from '@angular/core';
 import { Subject, fromEvent, takeUntil } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { Subject, fromEvent, takeUntil } from 'rxjs';
   styleUrls: ['./shelving-list.component.scss'],
   templateUrl: './shelving-list.component.html',
 })
-export class ShelvingListComponent implements AfterViewInit, OnDestroy, OnInit {
+export class ShelvingListComponent implements AfterViewInit, OnChanges, OnDestroy {
   @Input() public cellsCount: number = 0;
   @Input() public shelvesCount: number = 0;
   @Input() public shelvingsCount: number = 0;
@@ -19,7 +19,7 @@ export class ShelvingListComponent implements AfterViewInit, OnDestroy, OnInit {
 
   private readonly destroy$ = new Subject<void>();
 
-  public ngOnInit(): void {
+  public ngOnChanges(): void {
     this.generateCells();
   }
 
@@ -33,6 +33,7 @@ export class ShelvingListComponent implements AfterViewInit, OnDestroy, OnInit {
   }
 
   private generateCells(): void {
+    this.cells = [];
     let cellID = 0;
     for (let index1 = 0; index1 < this.shelvingsCount; index1++) {
       this.cells.push([]);
