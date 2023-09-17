@@ -13,8 +13,11 @@ export class ShelvingListComponent implements OnInit {
 
   public cells: string[][][] = [];
 
-
   public ngOnInit(): void {
+    this.generateCells();
+  }
+
+  private generateCells(): void {
     for (let index1 = 0; index1 < this.shelvingsCount; index1++) {
       this.cells.push([]);
       for (let index2 = 0; index2 < this.shelvesCount; index2++) {
@@ -25,5 +28,4 @@ export class ShelvingListComponent implements OnInit {
       }
     }
   }
-
 }
