@@ -13,3 +13,14 @@
 .main-container {
   flex: 1;
 }
+
+.form-container {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.label {
+  display: flex;
+  gap: 10px;
+}

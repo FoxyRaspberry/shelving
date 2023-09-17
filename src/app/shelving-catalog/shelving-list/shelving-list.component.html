@@ -1,0 +1,15 @@
+<section #container class="list-container">
+  <ng-container *ngFor="let shelvings of cells">
+    <table class="table">
+      <ng-container *ngFor="let shelves of shelvings">
+        <tr>
+          <ng-container *ngFor="let cell of shelves">
+            <td class="cell" id="{{cell.id}}">
+              {{cell.title}}
+            </td>
+          </ng-container>
+        </tr>
+      </ng-container>
+    </table>
+  </ng-container>
+</section>
